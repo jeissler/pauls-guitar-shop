@@ -1,16 +1,43 @@
 <template>
-  <section class="mt-10 px-7">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[200px]">
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[200px]">
+      <!-- First row: Fender Logo, Back Wall 2, Side Wall -->
+      <div class="md:col-span-2 bg-cream/77 p-6 rounded-lg shadow-lg flex items-center justify-center">
+        <NuxtImg src="images/fender-red-large.jpg" alt="Fender Authorized Dealer" class="h-32 w-full object-contain" />
+      </div>
+      <div class="bg-cream/88 p-4 rounded-lg shadow-lg overflow-hidden">
+        <NuxtImg src="images/back_wall_2.png" alt="Store Back Wall 2" class="w-full h-full object-cover rounded" />
+      </div>
+      <div class="bg-cream/77 p-4 rounded-lg shadow-lg overflow-hidden">
+        <NuxtImg src="images/side_wall.png" alt="Store Side Wall" class="w-full h-full object-cover rounded" />
+      </div>
+
       <!-- Tall items -->
       <div class="md:row-span-2 bg-cream/77 p-4 rounded-lg shadow-lg overflow-hidden">
-        <img src="~/assets/photos/player_2.png" alt="12 String Guitar Head" class="w-full h-full object-cover rounded">
+        <NuxtImg src="images/player_2.png" alt="12 String Guitar Head" class="w-full h-full object-cover rounded" />
       </div>
-      <!-- Horizontal items  -->
-      <div class="md:col-span-3 md:row-span-2 bg-cream/77 p-4 rounded-lg shadow-lg overflow-hidden">
-        <img src="~/assets/photos/back_wall_1.png" alt="Store Back Wall 1" class="w-full h-full object-cover rounded">
+      <div class="md:row-span-2 bg-cream/77 p-4 rounded-lg shadow-lg overflow-hidden">
+        <NuxtImg src="images/epiphone.png" alt="Fender Deluxe Reverb" class="w-full h-full object-cover rounded" />
+      </div>
+
+      <!-- Rectangle (wide) items grouped together -->
+      <div class="md:col-span-2 bg-cream/77 p-4 rounded-lg shadow-lg overflow-hidden">
+        <NuxtImg src="images/amps.png" alt="Guitar Amplifiers" class="w-full h-full object-cover rounded" />
+      </div>
+      <div class="md:col-span-2 bg-cream/77 p-4 rounded-lg shadow-lg overflow-hidden">
+        <NuxtImg src="images/back_wall_1.png" alt="Store Back Wall 1" class="w-full h-full object-cover rounded" />
+      </div>
+
+      <!-- Square items grouped together -->
+      <div class="md:col-span-2 bg-cream/77 p-4 rounded-lg shadow-lg overflow-hidden">
+        <NuxtImg src="images/pedal_case.png" alt="Pedal Case" class="w-full h-full object-cover rounded" />
+      </div>
+      <div class="bg-cream/77 p-4 rounded-lg shadow-lg overflow-hidden">
+        <NuxtImg src="images/12_string_bridge.png" alt="12 String Guitar Bridge" class="w-full h-full object-cover rounded" />
+      </div>
+      <div class="bg-cream/88 p-4 rounded-lg shadow-lg overflow-hidden">
+        <NuxtImg src="images/multi_effects.png" alt="Multi Effects Pedals" class="w-full h-full object-cover rounded" />
       </div>
     </div>
-  </section>
 </template>
 
 <script setup>
