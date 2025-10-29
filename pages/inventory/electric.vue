@@ -4,6 +4,7 @@
       :filters="brands"
       :selected="selectedBrands"
       @toggle="toggleBrand"
+      @clear="clearFilters"
     />
     <InventoryTable :data="filteredData" />
   </section>
@@ -15,6 +16,6 @@ import InventoryTable from "~/components/InventoryTable.vue";
 import InventoryFilters from "~/components/InventoryFilters.vue";
 import { useInventoryData } from "~/composables/useInventoryData.js";
 
-const { brands, selectedBrands, filteredData, toggleBrand } =
+const { brands, clearFilters, selectedBrands, filteredData, toggleBrand } =
   useInventoryData(inventoryData);
 </script>

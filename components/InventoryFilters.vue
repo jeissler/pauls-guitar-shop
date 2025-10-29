@@ -33,6 +33,14 @@
         </button>
       </div>
     </li>
+    <li v-if="selected.length > 0">
+      <button
+        class="inline-flex items-center gap-x-0.5 rounded-md px-2 py-1 text-sm font-medium text-gray-600 cursor-pointer hover:underline"
+        @click="clearFilters"
+      >
+        Clear Filters
+      </button>
+    </li>
   </ul>
 </template>
 
@@ -48,9 +56,13 @@ defineProps({
   },
 });
 
-const emit = defineEmits(["toggle"]);
+const emit = defineEmits(["toggle", "clear"]);
 
 const toggleFilter = (filter) => {
   emit("toggle", filter);
+};
+
+const clearFilters = () => {
+  emit("clear");
 };
 </script>

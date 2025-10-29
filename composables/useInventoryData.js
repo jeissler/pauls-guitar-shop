@@ -22,6 +22,11 @@ export const useInventoryData = (inventoryData) => {
     updateURL();
   };
 
+  const clearFilters = () => {
+    selectedBrands.value = [];
+    updateURL();
+  };
+
   const updateURL = () => {
     const query = { ...router.currentRoute.value.query };
 
@@ -42,5 +47,6 @@ export const useInventoryData = (inventoryData) => {
     selectedBrands,
     filteredData,
     toggleBrand,
+    clearFilters,
   };
 };
