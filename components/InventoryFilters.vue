@@ -1,5 +1,6 @@
 <template>
-  <ul class="flex flex-wrap gap-1">
+  <ul class="flex flex-wrap items-center gap-1 mb-1">
+    <span class="text-gray-700 mr-1 font-bold text-sm">Filters:</span>
     <li v-for="filter in filters" :key="filter">
       <div
         class="inline-flex items-center gap-x-0.5 rounded-md px-2 py-1 text-xs font-medium inset-ring inset-ring-gray-500/10"

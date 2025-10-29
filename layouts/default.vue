@@ -4,10 +4,10 @@
     <NuxtImg
       :src="backgroundSrc"
       alt="lots of high end guitars on the wall"
-      class="absolute inset-0 w-full h-full object-cover z-0"
+      class="fixed inset-0 w-full h-full object-cover z-0"
     />
     <!-- Dark overlay -->
-    <div class="absolute inset-0 bg-black/70 z-10 pointer-events-none"></div>
+    <div class="fixed inset-0 bg-black/70 z-10 pointer-events-none"></div>
     <!-- Message Banner -->
     <MessageBanner />
     <!-- Main content -->

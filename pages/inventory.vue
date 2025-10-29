@@ -12,7 +12,7 @@
     </p>
 
     <div
-      class="bg-cream/90 p-1 rounded-lg border border-black-600/30 overflow-x-auto"
+      class="bg-cream/90 p-1 rounded-lg border border-black-600/30 overflow-x-auto min-h-100"
     >
       <nav class="mb-4">
         <div class="flex flex-wrap gap-1">
