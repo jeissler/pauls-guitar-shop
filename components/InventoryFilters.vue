@@ -38,11 +38,11 @@
 <script setup>
 defineProps({
   filters: {
-    type: Array,
+    type: Set,
     required: true,
   },
   selected: {
-    type: Array,
+    type: Set,
     default: () => [],
   },
 });
