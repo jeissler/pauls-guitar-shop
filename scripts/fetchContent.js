@@ -35,14 +35,20 @@ const formatInventory = (rows) => {
   const entries = rows.slice(1).map((row) => {
     const item = {};
     headers.forEach((header, index) => {
-      if (header && header.trim() !== "") {
+      if (header && header.trim() !== "" && !header.startsWith("_")) {
         item[header] = row[index] || "";
       }
     });
     return item;
   });
 
-  return entries;
+  return entries.sort((a, b) => {
+    const brandCompare = a.Brand.localeCompare(b.Brand);
+    // Brands are different, sort by brand
+    if (brandCompare !== 0) return brandCompare;
+    // Brands are the same, sort by model
+    return a.Model.localeCompare(b.Model);
+  });
 };
 
 const writeFile = (content, outputFile) => {
