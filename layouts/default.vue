@@ -123,7 +123,7 @@
           </div>
           <div class="flex items-center gap-2 mb-12">
             <a
-              href="tel:8162246868"
+              href="tel:8165988378"
               class="group flex items-center gap-2 font-barlow-condensed-semibold text-3xl text-black tracking-wider text-left hover:text-red-500 transition-colors"
             >
               <PhoneIcon
