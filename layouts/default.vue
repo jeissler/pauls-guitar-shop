@@ -106,7 +106,7 @@
         <div class="flex flex-col flex-1 gap-2">
           <div class="mb-6">
             <a
-              href="https://www.google.com/maps/dir//1108+SW+U.S.+Hwy+40,+Blue+Springs,+MO+64014/@39.0090295,-94.3604932,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x87c11b58ec5d021d:0x82f37c3583c19ae!2m2!1d-94.2780918!2d39.0090766?entry=ttu&g_ep=EgoyMDI1MDUwMy4wIKXMDSoASAFQAw%3D%3D"
+              href="https://www.google.com/maps/place/1334+NW+Hwy+7,+Blue+Springs,+MO+64014/@39.0341913,-94.2706153,17z/data=!3m1!4b1!4m6!3m5!1s0x87c11a558d6cfe83:0x3c3134210ae82c0e!8m2!3d39.0341913!4d-94.2706153"
               target="_blank"
               rel="noopener"
               class="group flex items-start gap-2 hover:text-red-500 transition-colors"
@@ -117,7 +117,7 @@
               <p
                 class="font-barlow-condensed-medium text-2xl text-black group-hover:text-red-500 uppercase leading-tight text-left"
               >
-                1108 SW US HWY 40<br />Blue Springs,<br />Missouri 64014
+                1334 NW Hwy 7<br />Blue Springs,<br />Missouri 64014
               </p>
             </a>
           </div>
