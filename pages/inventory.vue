@@ -1,54 +1,57 @@
 <template>
-  <section>
-    <h1 class="font-barlow-condensed-medium text-4xl leading-tight uppercase text-left drop-shadow-sm mb-3">Coming Soon!</h1>
-    <p class="font-barlow-condensed-regular text-xl text-left leading-relaxed mb-8">
+  <div>
+    <h1
+      class="font-barlow-condensed-medium text-4xl leading-tight uppercase text-left drop-shadow-sm mb-3"
+    >
+      Current Inventory
+    </h1>
+    <p
+      class="font-barlow-condensed-regular text-xl text-left leading-relaxed mb-8"
+    >
       {{ inventoryText }}
     </p>
 
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[200px]">
-      <!-- First row: Fender Logo, Back Wall 2, Side Wall -->
-      <div class="md:col-span-2 bg-cream/77 p-6 rounded-lg shadow-lg flex items-center justify-center">
-        <NuxtImg src="images/fender-red-large.jpg" alt="Fender Authorized Dealer" class="h-32 w-full object-contain" />
-      </div>
-      <div class="bg-cream/88 p-4 rounded-lg shadow-lg overflow-hidden">
-        <NuxtImg src="images/back_wall_2.png" alt="Store Back Wall 2" class="w-full h-full object-cover rounded" />
-      </div>
-      <div class="bg-cream/77 p-4 rounded-lg shadow-lg overflow-hidden">
-        <NuxtImg src="images/side_wall.png" alt="Store Side Wall" class="w-full h-full object-cover rounded" />
-      </div>
+    <div
+      class="bg-cream/90 p-1 rounded-lg border border-black-600/30 overflow-x-auto min-h-100"
+    >
+      <nav class="mb-4">
+        <div class="flex flex-wrap gap-1">
+          <NuxtLink
+            v-for="tab in tabs"
+            :key="tab.path"
+            :to="tab.path"
+            class="px-2 sm:px-3 py-1 sm:py-1.5 font-barlow-condensed-medium text-base sm:text-lg uppercase tracking-wide transition-colors duration-300 ease-in-out rounded-md whitespace-nowrap flex-shrink-0"
+            :class="[
+              $route.path === tab.path
+                ? 'bg-black-800 text-cream shadow-lg border border-black-700/20'
+                : 'text-black-700 hover:text-black-900 hover:underline',
+            ]"
+          >
+            {{ tab.name }}
+          </NuxtLink>
+        </div>
+      </nav>
 
-      <!-- Tall items -->
-      <div class="md:row-span-2 bg-cream/77 p-4 rounded-lg shadow-lg overflow-hidden">
-        <NuxtImg src="images/player_2.png" alt="12 String Guitar Head" class="w-full h-full object-cover rounded" />
-      </div>
-      <div class="md:row-span-2 bg-cream/77 p-4 rounded-lg shadow-lg overflow-hidden">
-        <NuxtImg src="images/epiphone.png" alt="Fender Deluxe Reverb" class="w-full h-full object-cover rounded" />
-      </div>
-
-      <!-- Rectangle (wide) items grouped together -->
-      <div class="md:col-span-2 bg-cream/77 p-4 rounded-lg shadow-lg overflow-hidden">
-        <NuxtImg src="images/amps.png" alt="Guitar Amplifiers" class="w-full h-full object-cover rounded" />
-      </div>
-      <div class="md:col-span-2 bg-cream/77 p-4 rounded-lg shadow-lg overflow-hidden">
-        <NuxtImg src="images/back_wall_1.png" alt="Store Back Wall 1" class="w-full h-full object-cover rounded" />
-      </div>
-
-      <!-- Square items grouped together -->
-      <div class="md:col-span-2 bg-cream/77 p-4 rounded-lg shadow-lg overflow-hidden">
-        <NuxtImg src="images/pedal_case.png" alt="Pedal Case" class="w-full h-full object-cover rounded" />
-      </div>
-      <div class="bg-cream/77 p-4 rounded-lg shadow-lg overflow-hidden">
-        <NuxtImg src="images/12_string_bridge.png" alt="12 String Guitar Bridge" class="w-full h-full object-cover rounded" />
-      </div>
-      <div class="bg-cream/88 p-4 rounded-lg shadow-lg overflow-hidden">
-        <NuxtImg src="images/multi_effects.png" alt="Multi Effects Pedals" class="w-full h-full object-cover rounded" />
-      </div>
+      <NuxtPage />
     </div>
-  </section>
+  </div>
 </template>
 
 <script setup>
-import contentData from '~/content/content.json'
+import contentData from "~/content/content.json";
 
-const inventoryText = contentData.find(e => e.Section === 'inventory')?.Content || ''
-</script> 
+definePageMeta({
+  redirect: "/inventory/electric",
+});
+
+const tabs = [
+  { name: "Electric", path: "/inventory/electric" },
+  { name: "Acoustic", path: "/inventory/acoustic" },
+  { name: "Bass", path: "/inventory/bass" },
+  { name: "Amplifiers", path: "/inventory/amplifiers" },
+  { name: "Gear", path: "/inventory/gear" },
+];
+
+const inventoryText =
+  contentData.find((e) => e.Section === "inventory")?.Content || "";
+</script>

@@ -2,7 +2,7 @@ import { defineNuxtConfig } from 'nuxt/config'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineNuxtConfig({
-  compatibilityDate: '2025-07-27',
+  compatibilityDate: '2025-10-28',
   plugins: ['~/plugins/ascii-head.client.js'],
   devtools: { enabled: true },
   modules: [
